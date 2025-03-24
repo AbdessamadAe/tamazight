@@ -205,5 +205,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Abdessamad Ait Elmouden - [GitHub Profile](https://github.com/Abdessamadae)
 
-Project Link: [https://github.com/yourusername/tamazight](https://github.com/Abdessamadae/tamazight)
+[Linkedin Profile](https://www.linkedin.com/in/abdessamad-ait-elmouden/)
 

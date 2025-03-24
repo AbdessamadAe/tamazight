@@ -1,6 +1,6 @@
 {
   "name": "tamazight",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A JavaScript library for transliterating Latin Tamazight into Tifinagh and vice versa.",
   "main": "src/index.js",
   "type": "module",
