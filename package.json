@@ -1,0 +1,19 @@
+{
+  "name": "tamazight",
+  "version": "1.0.0",
+  "description": "A JavaScript library for transliterating Latin Tamazight into Tifinagh and vice versa.",
+  "main": "src/index.js",
+  "type": "module",
+  "bin": {
+    "tamazight-transliterate": "bin/cli.js"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^29.4.0"
+  },
+  "author": "Abdessamad Ait Elmouden",
+  "license": "MIT"
+}
