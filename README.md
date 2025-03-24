@@ -12,12 +12,61 @@ npm install tamazight
 
 - Transliterate from Latin to Tifinagh script
 - Transliterate from Tifinagh to Latin script
-- Handles multi-character sequences (like 'gh' → 'ⵖ')
-- Preserves characters that don't have a transliteration
+- Improves searchability of Amazigh content by enabling Latin-based search
 - Works in Node.js and browser environments
 - Command-line interface (CLI) included
 - Simplifies development of websites with Tifinagh text
-- Improves searchability of Amazigh content by enabling Latin-based search
+
+
+## Web Development Benefits
+
+### Enhanced Website Accessibility
+
+This library makes developing websites with Tifinagh text significantly easier:
+
+- **Dynamic Text Conversion**: Convert user input on-the-fly for bilingual interfaces
+- **Content Management**: Store content in Latin script and display in Tifinagh
+- **Form Processing**: Accept input in either script and normalize for backend processing
+- **Responsive Text**: Easily switch between scripts based on user preferences
+
+### Search Engine Optimization for Amazigh Content
+
+The transliteration capabilities provide significant SEO advantages:
+
+- **Improved Discoverability**: Users can search using Latin characters and find Tifinagh content
+- **Dual Indexing**: Search engines can index content in both scripts when properly implemented
+- **Content Accessibility**: Makes Amazigh language content accessible to a wider audience
+- **Metadata Enhancement**: Use both scripts in metadata to improve search engine visibility
+
+Example implementation for SEO benefits:
+
+```jsx
+<!-- HTML example with SEO benefits -->
+import React, { useState } from "react";
+import { transliterateToTifinagh } from "tamazight";
+
+function TamazightContent() {
+  const [latinText] = useState("Tamazight tutlayt n Imazighen");
+
+  // Transliterate the Latin text to Tifinagh
+  const tifinaghText = transliterateToTifinagh(latinText);
+
+  return (
+    <article>
+      {/* Tifinagh content for display */}
+      <h1 className="tifinagh">{tifinaghText}</h1>
+      
+      {/* Hidden Latin text for SEO purposes */}
+      <h1 data-latin={latinText} className="hidden-for-visual">
+        {latinText}
+      </h1>
+    </article>
+  );
+}
+
+export default TamazightContent;
+
+```
 
 ## Usage
 
@@ -158,38 +207,3 @@ Abdessamad Ait Elmouden - [GitHub Profile](https://github.com/Abdessamadae)
 
 Project Link: [https://github.com/yourusername/tamazight](https://github.com/Abdessamadae/tamazight)
 
-## Web Development Benefits
-
-### Enhanced Website Accessibility
-
-This library makes developing websites with Tifinagh text significantly easier:
-
-- **Dynamic Text Conversion**: Convert user input on-the-fly for bilingual interfaces
-- **Content Management**: Store content in Latin script and display in Tifinagh
-- **Form Processing**: Accept input in either script and normalize for backend processing
-- **Responsive Text**: Easily switch between scripts based on user preferences
-
-### Search Engine Optimization for Amazigh Content
-
-The transliteration capabilities provide significant SEO advantages:
-
-- **Improved Discoverability**: Users can search using Latin characters and find Tifinagh content
-- **Dual Indexing**: Search engines can index content in both scripts when properly implemented
-- **Content Accessibility**: Makes Amazigh language content accessible to a wider audience
-- **Metadata Enhancement**: Use both scripts in metadata to improve search engine visibility
-
-Example implementation for SEO benefits:
-
-```html
-<!-- HTML example with SEO benefits -->
-<article>
-  <h1 data-latin="Tamazight" class="tifinagh">ⵜⴰⵎⴰⵣⵉⵖⵜ</h1>
-  <p data-latin="Tamazight tutlayt n Imazighen" class="tifinagh">
-    ⵜⴰⵎⴰⵣⵉⵖⵜ ⵜⵓⵜⵍⴰⵢⵜ ⵏ ⵉⵎⴰⵣⵉⵖⴻⵏ
-  </p>
-  <!-- Hidden SEO-friendly content -->
-  <div class="hidden" aria-hidden="true">
-    Tamazight tutlayt n Imazighen
-  </div>
-</article>
-```
