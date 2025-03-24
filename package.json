@@ -15,5 +15,13 @@
     "jest": "^29.4.0"
   },
   "author": "Abdessamad Ait Elmouden",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbdessamadAe/tamazight.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AbdessamadAe/tamazight/issues"
+  },
+  "homepage": "https://github.com/AbdessamadAe/tamazight#readme"
 }
