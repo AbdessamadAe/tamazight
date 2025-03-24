@@ -10,21 +10,18 @@ npm install tamazight
 
 ## Features
 
-- Transliterate from Latin to Tifinagh script
-- Transliterate from Tifinagh to Latin script
+- Transliterate from Latin to Tifinagh script and vise-versa
 - Improves searchability of Amazigh content by enabling Latin-based search
-- Works in Node.js and browser environments
 - Command-line interface (CLI) included
 - Simplifies development of websites with Tifinagh text
 
 
-## Web Development Benefits
+## Web Development Benefits and Usage
 
 ### Enhanced Website Accessibility
 
 This library makes developing websites with Tifinagh text significantly easier:
 
-- **Dynamic Text Conversion**: Convert user input on-the-fly for bilingual interfaces
 - **Content Management**: Store content in Latin script and display in Tifinagh
 - **Form Processing**: Accept input in either script and normalize for backend processing
 - **Responsive Text**: Easily switch between scripts based on user preferences
@@ -68,36 +65,6 @@ export default TamazightContent;
 
 ```
 
-## Usage
-
-### In JavaScript (ES Modules)
-
-```javascript
-import { transliterateToTifinagh, transliterateToLatin } from 'tamazight';
-
-// Latin to Tifinagh
-const tifinaghText = transliterateToTifinagh('tamghart');
-console.log(tifinaghText); // Outputs: ⵜⴰⵎⵖⴰⵔⵜ
-
-// Tifinagh to Latin
-const latinText = transliterateToLatin('ⴰⵖⵉⵍⴰⵙ');
-console.log(latinText); // Outputs: aghilas
-```
-
-### In HTML
-
-```html
-<script type="module">
-  import { transliterateToTifinagh, transliterateToLatin } from './path/to/tamazight/src/index.js';
-  
-  // Latin to Tifinagh
-  const tifinaghText = transliterateToTifinagh('tamghart');
-  
-  // Tifinagh to Latin
-  const latinText = transliterateToLatin('ⵜⴰⵎⵖⴰⵔⵜ');
-</script>
-```
-
 ### Command Line Interface
 
 The package includes a CLI tool for quick transliteration:
@@ -129,25 +96,6 @@ Converts Tifinagh script text to Latin script Tamazight.
 - **Parameters**: `text` (String) - The Tifinagh script text to convert
 - **Returns**: String - The text converted to Latin script
 
-## Character Mapping
-
-The library uses the following character mappings:
-
-### Latin to Tifinagh (sample)
-- a → ⴰ
-- b → ⴱ
-- gh → ⵖ
-- kh → ⵅ
-- ...
-
-See the `src/mappings.js` file for the complete mapping.
-
-## Examples
-
-See the `examples` directory for more usage examples:
-- `example.js` - Node.js example
-- `example.html` - Browser example
-
 ## Development
 
 ### Prerequisites
@@ -159,7 +107,7 @@ See the `examples` directory for more usage examples:
 
 ```sh
 # Clone the repository
-git clone https://github.com/yourusername/tamazight.git
+git clone https://github.com/Abdessamadae/tamazight.git
 cd tamazight
 
 # Install dependencies
@@ -185,16 +133,18 @@ Contributions are welcome! Here's how you can contribute:
 4. Push to the branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
 
+### Ways you can contribute:
+
+- Improve character mappings: Help expand and improve the transliteration mappings to cover more characters and sequences.
+- Fix bugs: Report and help resolve any bugs or issues you find.
+- Add features: Have ideas for new features? We welcome new functionality that improves the library.
+
 ### Code Style
 
 - Follow standard JavaScript conventions
 - Add JSDoc comments for new functions
 - Add tests for new features
 - Update documentation as needed
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
